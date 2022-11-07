@@ -1,5 +1,8 @@
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+# Big Thx to `Chris Titus Tech`
+Orginal artical:  https://christitus.com/neovim-is-better/
+
 # Install
 ```bash
 git clone https://github.com/jarx88/nvim-fedora
