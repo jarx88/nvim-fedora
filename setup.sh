@@ -8,10 +8,13 @@ rm -rf ~/.local/share/nvim
 rm -rf ~/.cache/nvim
 mkdir -p "$HOME/.vim/undodir"
 mkdir -p "$HOME/.scripts"
+mkdir -p "$HOME/.ignore"
+mkdir -p "$HOME/.config"
+mkdir -p "$HOME/.config/Thunar/"
 cp "$gitpath/.ignore" "$HOME/.ignore"
 cp "$gitpath/tinypng" "$HOME/.scripts/tinypng"
 cp uca.xml "$HOME/.config/Thunar/"
 ln -s "$gitpath/custom" "$HOME/.config/nvim"
 # Share system clipboard with unnamedplus
 #sudo apt install vim-gtk3 ripgrep fd-find xclip neovim python3-venv luarocks golang-go shellcheck
-sudo dnf install xclip fd-find neovim ShellCheck codespell nodejs -y
+sudo dnf install xclip neovim ShellCheck nodejs -y
