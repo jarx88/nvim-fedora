@@ -105,7 +105,7 @@ require("null-ls").setup({
 	sources = {
 			require("null-ls").builtins.formatting.stylua,
 			require("null-ls").builtins.code_actions.cspell,
-			require("null-ls").builtins.diagnostics.codespell,
+			--require("null-ls").builtins.diagnostics.codespell,
 			require("null-ls").builtins.completion.spell,
 			require("null-ls").builtins.code_actions.proselint,
 			require("null-ls").builtins.diagnostics.write_good,

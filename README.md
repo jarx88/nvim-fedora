@@ -5,6 +5,7 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.g
 git clone https://github.com/jarx88/nvim-fedora
 cd nvim-fedora
 sudo ./setup.sh
+./setup.sh
 ``` 
 
 ## Adding Tools
