@@ -7,3 +7,10 @@ cd nvim-fedora
 sudo ./setup.sh
 ``` 
 
+## Adding Tools
+```
+:Mason
+```
+
+## Startup
+USE `:checkhealth` FIRST!

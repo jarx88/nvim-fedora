@@ -1,6 +1,6 @@
 require('keymaps')
 require('plugins')
-require('impatient') --Uses impatient plugin to load faster
+-- require('impatient') --Uses impatient plugin to load faster
 -- ========================================================================== --
 -- ==                           EDITOR SETTINGS                            == --
 -- ========================================================================== --
@@ -53,46 +53,47 @@ vim.cmd('colorscheme nord')
 ---
 -- Titus Custom Markdown HUGO Image Insert
 ---
-require'clipboard-image'.setup {
-  markdown = {
-   img_dir = {"content/images", "%:p:h:t", "%:t:r"},
-   img_dir_txt = {"/images", "%:p:h:t", "%:t:r"},
-   img_name = function ()
-      vim.fn.inputsave()
-      local name = vim.fn.input('Name: ')
-      vim.fn.inputrestore()
+-- require'clipboard-image'.setup {
+--   markdown = {
+--    img_dir = {"content/images", "%:p:h:t", "%:t:r"},
+--    img_dir_txt = {"/images", "%:p:h:t", "%:t:r"},
+--    img_name = function ()
+--       vim.fn.inputsave()
+--       local name = vim.fn.input('Name: ')
+--       vim.fn.inputrestore()
 
-      if name == nil or name == '' then
-        return os.date('%y-%m-%d-%H-%M-%S')
-      end
-      return name
-    end,
-    img_handler = function ()
-        return function (path)
-            return os.execute(string.format('~/.scripts/tinypng -s -f %s &', path))
-        end
-    end
-  }
-}
+--       if name == nil or name == '' then
+--         return os.date('%y-%m-%d-%H-%M-%S')
+--       end
+--       return name
+--     end,
+--     img_handler = function ()
+--         return function (path)
+--             return os.execute(string.format('~/.scripts/tinypng -s -f %s &', path))
+--         end
+--     end
+--   }
+-- }
 
 -- LSP and Linting Config
 require("mason").setup()
-require("mason-lspconfig").setup({
-	ensure_installed = {
-    'bashls',
-    'luau_lsp',
-    'marksman',
-    'powershell_es',
-  },
-	automatic_installation = true,
-})
+require("mason-lspconfig").setup()
+--   {
+-- 	ensure_installed = {
+--     'bashls',
+--     'luau_lsp',
+--     'marksman',
+--     -- 'powershell_es',
+--   },
+-- 	automatic_installation = true,
+-- })
 
 require'lspconfig'.bashls.setup{}
 require'lspconfig'.luau_lsp.setup{}
 require'lspconfig'.marksman.setup{}
-require'lspconfig'.powershell_es.setup{
-  bundle_path = '~/.local/share/nvim/mason/packages/powershell-editor-services/PowerShellEditorServices/',
-}
+-- require'lspconfig'.powershell_es.setup{
+--   bundle_path = '~/.local/share/nvim/mason/packages/powershell-editor-services/PowerShellEditorServices/',
+-- }
 
 require'nvim-treesitter.configs'.setup {
   highlight = {
@@ -126,10 +127,10 @@ require('lualine').setup {
 }
 
 -- Add Ctrl + X and initialize toggle term 
-require("toggleterm").setup {
-	open_mapping = [[<c-x>]],
-	shade_terminals = false
-}
+--require("toggleterm").setup {
+--	open_mapping = [[<c-x>]],
+--	shade_terminals = false
+--}
 
 -- Add projects capability to telescope
 require('telescope').load_extension('projects')

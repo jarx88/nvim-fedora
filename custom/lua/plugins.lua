@@ -119,7 +119,7 @@ return packer.startup(function(use)
   -- Titus Custom
   use { "ekickx/clipboard-image.nvim" }
   use { "mbbill/undotree" }
-  use { "wakatime/vim-wakatime" }
+  -- use { "wakatime/vim-wakatime" }
   use { "Pocco81/auto-save.nvim" }
   use { "Pocco81/true-zen.nvim" }
 
