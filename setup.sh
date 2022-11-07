@@ -13,4 +13,5 @@ cp "$gitpath/tinypng" "$HOME/.scripts/tinypng"
 cp uca.xml "$HOME/.config/Thunar/"
 ln -s "$gitpath/custom" "$HOME/.config/nvim"
 # Share system clipboard with unnamedplus
-sudo apt install vim-gtk3 ripgrep fd-find xclip neovim python3-venv luarocks golang-go shellcheck
+#sudo apt install vim-gtk3 ripgrep fd-find xclip neovim python3-venv luarocks golang-go shellcheck
+sudo dnf install xclip fd-find neovim ShellCheck codespell nodejs -y
